@@ -1,0 +1,10 @@
+<h2>Todo list</h2>
+
+<ul>
+  <app-todo-item (showMeTheMoney)="showTheMoney($event)" *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+</ul>
+
+<form [formGroup]="formGroupTodo" (ngSubmit)="saveTodo()">
+  <input formControlName="text">
+  <button>Save</button>
+</form>
